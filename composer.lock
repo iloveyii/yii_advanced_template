@@ -1,0 +1,137 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "58724b6dc872a155f8c24925afee6330",
+    "packages": [
+        {
+            "name": "2amigos/yiistrap",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yiistrap.git",
+                "reference": "24537d27105acfc247417895dad6779a78c83296"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yiistrap/zipball/24537d27105acfc247417895dad6779a78c83296",
+                "reference": "24537d27105acfc247417895dad6779a78c83296",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeception/codeception": "@stable",
+                "crisu83/yii-composer": "dev-master",
+                "php": ">=5.3.0",
+                "yiisoft/yii": "1.1.13"
+            },
+            "type": "library",
+            "extra": {
+                "yii-install-writable": [
+                    "tests/_log"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Christoffer Niska",
+                    "email": "christoffer.niska@gmail.com",
+                    "homepage": "http://www.cniska.net/"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "ramirez.cobos@gmail.com",
+                    "homepage": "http://www.ramirezcobos.com/"
+                }
+            ],
+            "description": "Twitter Bootstrap for the Yii PHP framework.",
+            "keywords": [
+                "bootstrap",
+                "yii"
+            ],
+            "time": "2013-09-01 21:42:53"
+        },
+        {
+            "name": "2amigos/yiiwheels",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yiiwheels.git",
+                "reference": "61b1e03448b99e0b84e1f8168fb16561ffdc25a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yiiwheels/zipball/61b1e03448b99e0b84e1f8168fb16561ffdc25a4",
+                "reference": "61b1e03448b99e0b84e1f8168fb16561ffdc25a4",
+                "shasum": ""
+            },
+            "require": {
+                "2amigos/yiistrap": "1.1.1"
+            },
+            "require-dev": {
+                "php": ">=5.3.0",
+                "yiisoft/yii": "1.1.13"
+            },
+            "type": "yii-extension",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "ramirez.cobos@gmail.com",
+                    "homepage": "http://www.ramirezcobos.com/"
+                }
+            ],
+            "description": "Extension library for Yiistrap, Yii Twitter's Bootstrap.",
+            "keywords": [
+                "bootstrap",
+                "yii"
+            ],
+            "support": {
+                "source": "https://github.com/2amigos/yiiwheels/tree/master",
+                "issues": "https://github.com/2amigos/yiiwheels/issues"
+            },
+            "time": "2014-02-28 11:21:27"
+        },
+        {
+            "name": "yiisoft/yii",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii.git",
+                "reference": "45696571f92ce4e7317106e06c752bea53fe6ebd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/yiisoft/yii/archive/45696571f92ce4e7317106e06c752bea53fe6ebd.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library",
+            "description": "Yii PHP Framework",
+            "homepage": "https://github.com/yiisoft/yii",
+            "time": "2014-03-09 02:56:57"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "yiisoft/yii": 20,
+        "2amigos/yiiwheels": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
