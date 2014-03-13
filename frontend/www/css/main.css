@@ -39,5 +39,9 @@
 }
 
 body {
-    padding-top: 70px;
+   /* padding-top: 70px; */
+}
+
+.header-bar {
+    min-height: 80px;
 }

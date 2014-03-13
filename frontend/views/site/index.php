@@ -1,50 +1,69 @@
-<div class="container">
-
-	<!-- Main hero unit for a primary marketing message or call to action -->
-	<div class="hero-unit">
-		<h1>Hello, world!</h1>
-
-		<p>This is a template for a simple marketing or informational website. It includes a large callout called the
-			hero unit and three supporting pieces of content. Use it as a starting point to create something more
-			unique.</p>
-
-		<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-	</div>
-
-	<!-- Example row of columns -->
-	<div class="row">
-		<div class="span4">
-			<h2>Heading</h2>
-
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-				condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-				euismod. Donec sed odio dui. </p>
-
-			<p><a class="btn" href="#">View details &raquo;</a></p>
-		</div>
-		<div class="span4">
-			<h2>Heading</h2>
-
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-				condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-				euismod. Donec sed odio dui. </p>
-
-			<p><a class="btn" href="#">View details &raquo;</a></p>
-		</div>
-		<div class="span4">
-			<h2>Heading</h2>
-
-			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-				porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-				fermentum massa justo sit amet risus.</p>
-
-			<p><a class="btn" href="#">View details &raquo;</a></p>
-		</div>
-	</div>
-
-	<hr>
-
-	<footer>
-		<p>&copy; Company 2012</p>
-	</footer>
-</div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+    
+    <div class="items">
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="#">
+                    <img src="img/iphone5.jpg" class="img-responsive">
+                </a>
+                <div class="caption">
+                    <h4>Apple iPhone 5</h4>
+                    <p>USD: 3500</p>
+                    <p>
+                        <a class="btn btn-default" href="/buy/apple-iphone-5">Details</a>
+                        <a class="btn btn-success add-to-cart" id="1" href="#">Buy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="#">
+                    <img src="img/galaxys3.jpg" class="img-responsive">
+                </a>
+                <div class="caption">
+                    <h4>Galaxy S4</h4>
+                    <p>USD: 3400</p>
+                    <p>
+                        <a class="btn btn-default" href="/buy/samsung-galaxy-s4">Details</a>
+                        <a class="btn btn-success add-to-cart" id="2" href="#">Buy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="#">
+                    <img src="img/sony-xperia-z1.jpg" class="img-responsive">
+                </a>
+                <div class="caption">
+                    <h4>Sony Xperia Z</h4>
+                    <p>USD: 3600</p>
+                    <p>
+                        <a class="btn btn-default" href="/buy/sony-xperia-z">Details</a>
+                        <a class="btn btn-success add-to-cart" id="3" href="#">Buy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="#">
+                    <img src="img/ascend-p6.jpg" class="img-responsive">
+                </a>
+                <div class="caption">
+                    <h4>Ascend P6</h4>
+                    <p>USD: 3300</p>
+                    <p>
+                        <a class="btn btn-default" href="/buy/ascend-p6">Details</a>
+                        <a class="btn btn-success add-to-cart" id="4" href="#">Buy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+	
