@@ -19,7 +19,9 @@ return array(
 		'bootstrap' => dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiistrap',
 		'yiiwheels' =>  dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiiwheels'
 	),
-
+    'import'=>array(
+		'application.widgets.*',
+	),
 	// application behaviors
 	'behaviors' => array(),
 
@@ -50,9 +52,11 @@ return array(
 
 			'rules' => array(
 				// default rules
-				'<controller:\w+>/<id:\d+>' => '<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '' => 'site/index',
+                'contact' => 'site/contact',
+				'<language:(sv|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
+				'<language:(sv|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+				'<language:(sv|en)>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 			),
 		),
 		'user' => array(
@@ -67,5 +71,6 @@ return array(
 		// php configuration
 		'php.defaultCharset' => 'utf-8',
 		'php.timezone' => 'UTC',
+        'languages'=>array('sv'=>'Swedish', 'en'=>'English',),
 	),
 );

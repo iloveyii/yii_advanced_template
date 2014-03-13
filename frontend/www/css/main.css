@@ -37,3 +37,7 @@
 .sm-txt {
     width: 80px;
 }
+
+body {
+    padding-top: 70px;
+}

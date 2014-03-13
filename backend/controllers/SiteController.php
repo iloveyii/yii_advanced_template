@@ -80,6 +80,7 @@ class SiteController extends EController
         if(parent::beforeAction($action)) {
             switch ($action->getId()) {
                 case 'usersview':
+                case 'seo':
                     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/icons.css');
                     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/index.css');
                     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/dataTables.bootstrap.css');

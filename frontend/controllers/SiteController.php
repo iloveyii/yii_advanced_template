@@ -29,4 +29,8 @@ class SiteController extends EController
 				$this->render('error', $error);
 		}
 	}
+    
+    public function actionContact() {
+        $this->render('contact');
+    }
 }

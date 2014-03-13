@@ -102,5 +102,19 @@ class EController extends CController
 			$baseUrl = Yii::app()->request->baseUrl;
 		return $baseUrl . '/' . ltrim($url, '/');
 	}
-
+    
+    public function createMulti($route, $param=array()){
+        $param['language'] = Yii::app()->language;
+        return Yii::app()->createUrl(trim($route,'/'),$param,'&');
+    }
+    
+    public function createMultilanguageReturnUrl($lang='en'){
+        if (count($_GET)>0){
+            $arr = $_GET;
+            $arr['language']= $lang;
+        }
+        else 
+            $arr = array('language'=>$lang);
+        return $this->createUrl('', $arr);
+    }
 }

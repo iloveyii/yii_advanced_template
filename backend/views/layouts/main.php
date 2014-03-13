@@ -270,7 +270,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="<?php echo $this->createUrl('site/productedit'); ?>"><i class="fa fa-credit-card"></i> Product<span class="fa arrow"></span></a>
+                        <a href="<?php echo $this->createUrl('site/productedit'); ?>"><i class="fa fa-glass"></i> Product<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li>
                                 <a href="<?php echo $this->createUrl('site/productedit'); ?>">Enter Product</a>
@@ -297,7 +297,7 @@
                         <a href="<?php echo $this->createUrl('site/forms'); ?>"><i class="fa fa-edit fa-fw"></i> Forms</a>
                     </li>
                     <li>
-                        <a href="<?php echo $this->createUrl('site/seo'); ?>"><i class="fa fa-edit fa-fw"></i> SEO </a>
+                        <a href="<?php echo $this->createUrl('site/seo'); ?>"><i class="fa fa-arrow-circle-o-up fa-fw"></i> SEO </a>
                     </li>
                 </ul>
                 <!-- /#side-menu -->
