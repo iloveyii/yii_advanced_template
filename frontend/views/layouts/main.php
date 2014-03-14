@@ -129,7 +129,7 @@
                                     </ol>
                                     <div class="carousel-inner" style="height: 200px;">
                                         <div class="item active">
-                                            <img style="height: 200px;" alt="image 1" src="img/img1.jpeg" />
+                                            <img  alt="image 1" src="img/img1.jpeg" />
                                             <div class="container">
                                                 <div class="carousel-caption">
                                                     <h1>My Heading Text</h1>
@@ -207,6 +207,29 @@
                               <li><a href="#">Tutorials</a></li>
                             </ul>
                       </div>
+                      <div class="social">
+                            <div class="col-social">
+                                <div class="social twitter">
+                                    <a href="#"><i class="fa fa-twitter fa-lg"></i> </a>
+                                </div>
+                            </div>
+                            <div class="col-social">
+                                <div class="col-md-offset-1 social facebook">
+                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-social">
+                                <div class="social google-plus">
+                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-social">
+                                <div class="social rss">
+                                    <a href="#"><i class="fa fa-rss fa-lg"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     
                     <div class="col-md-4">

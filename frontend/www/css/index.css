@@ -351,3 +351,8 @@ body {
 	background-color: #5285AB;
 	text-decoration: none;
 }
+
+.col-social {
+  display: inline-block;
+  width: 24%;
+}
