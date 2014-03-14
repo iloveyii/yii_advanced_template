@@ -93,17 +93,25 @@
                             <a class="list-group-item" href="/chargers">Chargers</a>          
                         </div>
                         <div class="social">
-                            <div class="social twitter">
-                                <i class="fa fa-twitter fa-lg"></i><a href="#"> twitter</a>
+                            <div class="col-md-6">
+                                <div class="social twitter">
+                                    <i class="fa fa-twitter fa-lg"></i><a href="#"> twitter</a>
+                                </div>
                             </div>
-                            <div class="social facebook">
-                                <i class="fa fa-facebook fa-lg"></i><a href="#">facebook</a>
+                            <div class="col-md-6">
+                                <div class="col-md-offset-1 social facebook">
+                                    <i class="fa fa-facebook fa-lg"></i><a href="#">facebook</a>
+                                </div>
                             </div>
-                            <div class="social google-plus">
-                                <i class="fa fa-google-plus fa-lg"></i><a href="#">Google</a>
+                            <div class="col-md-6">
+                                <div class="social google-plus">
+                                    <i class="fa fa-google-plus fa-lg"></i><a href="#">Google</a>
+                                </div>
                             </div>
-                            <div class="social rss">
-                                <i class="fa fa-rss fa-lg"></i><a href="#"> rss</a>
+                            <div class="col-md-6">
+                                <div class="social rss">
+                                    <i class="fa fa-rss fa-lg"></i><a href="#"> rss</a>
+                                </div>
                             </div>
                         </div>
                         
