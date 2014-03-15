@@ -70,8 +70,9 @@
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav" id="main-menu">
                                   <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Contact'); ?></a></li>
+                                  <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Login'); ?></a></li>
                             </ul>
 
                           </div><!-- /.navbar-collapse -->
@@ -207,24 +208,24 @@
                               <li><a href="#">Tutorials</a></li>
                             </ul>
                       </div>
-                      <div class="social">
+                        <div class="social">
                             <div class="col-social">
-                                <div class="social twitter">
+                                <div class="social twitter" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-twitter fa-lg"></i> </a>
                                 </div>
                             </div>
                             <div class="col-social">
-                                <div class="col-md-offset-1 social facebook">
+                                <div class="social facebook" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                                 </div>
                             </div>
                             <div class="col-social">
-                                <div class="social google-plus">
+                                <div class="social google-plus" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
                                 </div>
                             </div>
                             <div class="col-social">
-                                <div class="social rss">
+                                <div class="social rss" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-rss fa-lg"></i> </a>
                                 </div>
                             </div>
@@ -250,8 +251,41 @@
                                <li><a href="#">Product Updates</a></li>
                                <li><a href="#">Downloads Center</a></li>
                                <li><a href="#">Support &amp; Contact Info</a></li>
-                               <li><a href="#">Knowledge Base</a></li>
                              </ul>
+                            <div class="cc">
+                                 <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                            <div class="">
+                                                <img class="cimg img-responsive" src="img/visa.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                </div>
+                                 <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                            <div class="">
+                                                <img class="cimg img-responsive" src="img/master.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                </div>
+                                 <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                            <div class="">
+                                                <img class="cimg img-responsive" src="img/discover.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                </div>
+
+
+                            </div>
                        </div>
                     </div>
                 </div>
