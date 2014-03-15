@@ -20,35 +20,35 @@
             ================================== -->
             <div class="container header-bar">
                 <div class="row">
-                    <div class="col-md-12">
-                        <img alt="Home" src="img/logo.png"> 
-                        <div class="pull-right" style="line-height: 70px;">
-                                <div class="pull-left">
-                                    <form action="" class="navbar-form navbar-right">
+                    <div class="col-md-12" style="line-height: 50px; padding: 5px 0px 0px;">
+                        <div class="col-md-2">
+                            <img alt="Home" src="img/logo.png"> 
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 pull-right">
+                            <div class="col-md-8 col-xs-8">
+                                <form action="" class="navbar-form no-pad">
                                     <div class="input-group">
                                         <input type="Search" placeholder="Search..." class="form-control" />
                                         <div class="input-group-btn">
                                             <button class="btn btn-info">
-                                            <span class="glyphicon glyphicon-search"></span>
+                                                <span style="margin: 0;" class="glyphicon glyphicon-search"></span>
                                             </button>
                                         </div>
                                     </div>
-                                    </form>
-                                </div>
-                           
-                                <div class="pull-right">
-                                    <form action="" class="navbar-form navbar-right">
-                                    <div class="input-group">
-                                        <?php 
-                                            $this->widget('LanguageSelector');
-                                        ?>
-                                    </div>
-                                    </form>
-                                </div>
-                           
+                                </form>
                             </div>
 
+                            <div class="col-md-4 col-xs-4 no-pad">
+                                <form action="" class="navbar-form no-pad">
+                                <div class="input-group pull-right">
+                                    <?php 
+                                        $this->widget('LanguageSelector');
+                                    ?>
+                                </div>
+                                </form>
+                            </div>
                     </div>
+                </div>
                 </div>
             </div>
             <!-- / header-bar -->
@@ -59,11 +59,11 @@
                 <nav class="navbar" role="navigation" style="background: none repeat scroll 0 0 #676767;">
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" style="background-color: #3373A5;">
                               <span class="sr-only">Menu</span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
+                              <span class="icon-bar" style="background-color: #FFF;"></span>
+                              <span class="icon-bar" style="background-color: #FFF;"></span>
+                              <span class="icon-bar" style="background-color: #FFF;"></span>
                             </button>
                             <a class="navbar-brand" href="<?php echo $this->createUrl('site/index');?>"><?php echo Yii::t('app','Home') ; ?></a>
                         </div>
@@ -93,29 +93,6 @@
                             <a class="list-group-item" href="/headphones">Headphones</a>
                             <a class="list-group-item" href="/chargers">Chargers</a>          
                         </div>
-                        <div class="social">
-                            <div class="col-md-6">
-                                <div class="social twitter">
-                                    <i class="fa fa-twitter fa-lg"></i><a href="#"> twitter</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="col-md-offset-1 social facebook">
-                                    <i class="fa fa-facebook fa-lg"></i><a href="#">facebook</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="social google-plus">
-                                    <i class="fa fa-google-plus fa-lg"></i><a href="#">Google</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="social rss">
-                                    <i class="fa fa-rss fa-lg"></i><a href="#"> rss</a>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
                     <div class="col-md-9">
                         <div class="row">
@@ -210,22 +187,22 @@
                       </div>
                         <div class="social">
                             <div class="col-social">
-                                <div class="social twitter" style="padding: 12px 0;">
+                                <div class="twitter" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-twitter fa-lg"></i> </a>
                                 </div>
                             </div>
                             <div class="col-social">
-                                <div class="social facebook" style="padding: 12px 0;">
+                                <div class="facebook" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                                 </div>
                             </div>
                             <div class="col-social">
-                                <div class="social google-plus" style="padding: 12px 0;">
+                                <div class="google-plus" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
                                 </div>
                             </div>
                             <div class="col-social">
-                                <div class="social rss" style="padding: 12px 0;">
+                                <div class="rss" style="padding: 12px 0;">
                                     <a href="#"><i class="fa fa-rss fa-lg"></i> </a>
                                 </div>
                             </div>
@@ -253,7 +230,7 @@
                                <li><a href="#">Support &amp; Contact Info</a></li>
                              </ul>
                             <div class="cc">
-                                 <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                 <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
                                                 <img class="cimg img-responsive" src="img/visa.png" />
@@ -263,7 +240,7 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
-                                 <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                 <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
                                                 <img class="cimg img-responsive" src="img/master.png" />
@@ -273,7 +250,17 @@
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
-                                 <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                 <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
+                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                            <div class="">
+                                                <img class="cimg img-responsive" src="img/discover.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                </div>
+                                 <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
                                                 <img class="cimg img-responsive" src="img/discover.png" />
@@ -292,7 +279,7 @@
             </div>
             <div class="col-md-12">
                 <div class="footer-bot">
-                <p>Copyright &COPY; SoftHem Tuts.
+                <p>Copyright &COPY; SoftHem.
                     <a id="login-modal" data-toggle="modal"  href="#terms">Terms & Conditions</a>
                 </p>
                 <!-- Modal -->

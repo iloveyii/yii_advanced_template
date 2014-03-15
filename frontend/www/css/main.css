@@ -74,7 +74,10 @@ body {
     border-radius: 0px 0px 7px 7px;
     background-color: #000000;
 }
-
+.footer-bot p {
+    line-height: 30px;
+    margin: 0;
+}
 .credit-card {
     width: 140px;
     float: left;

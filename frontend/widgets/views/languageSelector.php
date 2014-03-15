@@ -4,13 +4,16 @@
         // Render options as links
         $imagesFolder = Yii::app()->baseUrl . '/img/';
         $lastElement = end($languages);
+        $count = count($languages); $count = round(12 / $count);
         foreach($languages as $key=>$lang) {
+            echo "<div class='col-md-$count col-xs-$count no-pad'>";
             if($key != $currentLang) {
                 echo CHtml::link(
                      "<img class='img-responsive img-thumbnail' src='{$imagesFolder}{$key}.png' alt='Swedish' >", 
                      $this->getOwner()->createMultilanguageReturnUrl($key));
             } else echo "<img class='img-responsive img-thumbnail flag-focus' src='{$imagesFolder}/{$key}.png' alt='Swedish' >";
-            if($lang != $lastElement) echo ' ';
+            // if($lang != $lastElement) echo ' ';
+            echo '</div>';
         }
     }
     else {
