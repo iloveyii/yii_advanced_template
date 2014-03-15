@@ -53,6 +53,7 @@ return array(
 			'rules' => array(
 				// default rules
                 '' => 'site/index',
+                'product' => 'site/product',
                 'contact' => 'site/contact',
 				'<language:(sv|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<language:(sv|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',

@@ -33,4 +33,8 @@ class SiteController extends EController
     public function actionContact() {
         $this->render('contact');
     }
+    
+    public function actionProduct() {
+        $this->render('product');
+    }
 }

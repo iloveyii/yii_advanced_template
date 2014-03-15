@@ -71,6 +71,7 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav" id="main-menu">
+                                  <li><a href="<?php echo $this->createUrl('site/product');?>"><?php echo Yii::t('app','Product'); ?></a></li>
                                   <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Contact'); ?></a></li>
                                   <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Login'); ?></a></li>
                             </ul>
@@ -184,7 +185,60 @@
                               <li><a href="#">Products List</a></li>
                               <li><a href="#">Tutorials</a></li>
                             </ul>
-                      </div>
+                        </div>
+                        <div class="cc">
+                           <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
+                                  <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
+                                      <div class="">
+                                          <img class="cimg img-responsive" src="img/visa.png" />
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
+                                      <i class="fa fa-check"></i>
+                                  </div>
+                          </div>
+                           <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
+                                  <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
+                                      <div class="">
+                                          <img class="cimg img-responsive" src="img/master.png" />
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
+                                      <i class="fa fa-check"></i>
+                                  </div>
+                          </div>
+                           <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
+                                  <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
+                                      <div class="">
+                                          <img class="cimg img-responsive" src="img/discover.png" />
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
+                                      <i class="fa fa-check"></i>
+                                  </div>
+                          </div>
+                           <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
+                                  <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
+                                      <div class="">
+                                          <img class="cimg img-responsive" src="img/maestro.png" />
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
+                                      <i class="fa fa-check"></i>
+                                  </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="tricolumn">
+                            <ul class="menulist">
+                              <li><a href="#">Menu Systems</a></li>
+                              <li><a href="#">Web Widgets</a></li>
+                              <li><a href="#">Slide Shows/Galleries</a></li>
+                              <li><a href="#">CSS Templates</a></li>
+                            </ul>
+                        </div>
                         <div class="social">
                             <div class="col-social">
                                 <div class="twitter" style="padding: 12px 0;">
@@ -211,17 +265,6 @@
                     </div>
                     
                     <div class="col-md-4">
-                        <div class="tricolumn">
-                            <ul class="menulist">
-                              <li><a href="#">Menu Systems</a></li>
-                              <li><a href="#">Web Widgets</a></li>
-                              <li><a href="#">Slide Shows/Galleries</a></li>
-                              <li><a href="#">CSS Templates</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
                         
                         <div class="tricolumn">
                             <ul class="menulist">
@@ -231,42 +274,42 @@
                              </ul>
                             <div class="cc">
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
-                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                        <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/visa.png" />
+                                                <img class="cimg img-responsive" src="img/nordea.png" />
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
-                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                        <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/master.png" />
+                                                <img class="cimg img-responsive" src="img/handels.png" />
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
-                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                        <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/discover.png" />
+                                                <img class="cimg img-responsive" src="img/swed.png" />
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
-                                        <div class="col-md-9 col-sm-9 col-xs-9 no-pad cc-left" style="background-color: #FFF;">
+                                        <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/discover.png" />
+                                                <img class="cimg img-responsive" src="img/seb.png" />
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 no-pad cc-right">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
