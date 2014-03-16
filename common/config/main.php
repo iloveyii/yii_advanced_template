@@ -30,8 +30,17 @@ return array(
 		'vendor.2amigos.yiiwheels.helpers.*',
 	),
 	'components' => array(
+        /*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+		), */
+        'db' => array(
+			'connectionString' => 'mysql:host=localhost;dbname=mobilz',
+			'username' => 'root',
+			'password' => 'root',
+			'enableProfiling' => true,
+			'enableParamLogging' => true,
+			'charset' => 'utf8',
 		),
 		'errorHandler' => array(
 			'errorAction' => 'site/error',

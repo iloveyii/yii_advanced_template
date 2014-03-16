@@ -17,7 +17,8 @@ return array(
 	// path aliases
 	'aliases' => array(
 		'bootstrap' => dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiistrap',
-		'yiiwheels' =>  dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiiwheels'
+		'yiiwheels' =>  dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiiwheels',
+		'controllers22' =>  dirname(__FILE__) . '/../..' . '/controllers',
 	),
     'import'=>array(
 		'application.widgets.*',
@@ -26,7 +27,11 @@ return array(
 	'behaviors' => array(),
 
 	// controllers mappings
-	'controllerMap' => array(),
+	'controllerMap' => array(
+//        'county'=>array(
+//            'class'=>'application.controllers.SiteController',
+//         ),
+    ),
 
 	// application modules
 	'modules' => array(),
@@ -54,10 +59,12 @@ return array(
 				// default rules
                 '' => 'site/index',
                 'product' => 'site/product',
-                'contact' => 'site/contact',
-				'<language:(sv|en)>/<controller:\w+>/<id:\d+>' => '<controller>/view',
-				'<language:(sv|en)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-				'<language:(sv|en)>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                'contact' => 'site/contact', 
+                // 'county' => 'site/county', // <language:(sv|en)>/
+                'county' => 'county/index', // <language:(sv|en)>/
+				'<controller:\w+>/<id:\d+>' => '<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 			),
 		),
 		'user' => array(

@@ -4,11 +4,11 @@
         <title>Twitter Bootstrap 3 - Frontend Template </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/bootstrap.css" />
-        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/main.css" />
-        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/index.css" />
-        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/sb-admin.css" />
-        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/font-awesome.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="css/main.css" />
+        <link type="text/css" rel="stylesheet" href="css/index.css" />
+        <link type="text/css" rel="stylesheet" href="css/sb-admin.css" />
+        <link type="text/css" rel="stylesheet" href="css/font-awesome.css" rel="stylesheet">
         
     </head>
     <body>
@@ -73,7 +73,7 @@
                             <ul class="nav navbar-nav" id="main-menu">
                                   <li><a href="<?php echo $this->createUrl('site/product');?>"><?php echo Yii::t('app','Product'); ?></a></li>
                                   <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Contact'); ?></a></li>
-                                  <li><a href="<?php echo $this->createUrl('county/index');?>"><?php echo Yii::t('app','Login'); ?></a></li>
+                                  <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Login'); ?></a></li>
                             </ul>
 
                           </div><!-- /.navbar-collapse -->
@@ -96,31 +96,32 @@
                         </div>
                         
                         <div class="list-group">
-                            
-                            <strong class="list-group-item"> Hela Sverige </strong>
+                            <div class="input-group custom-search-form">
+                                <input type="text" placeholder="Search..." class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="list-group">
+                            <strong class="list-group-item"> Stockholm </strong>
                             <a class="list-group-item" href="#">Norrbotten</a>
-                            <a class="list-group-item" href="#">Västerbotten</a>
-                            <a class="list-group-item" href="#">Jämtland</a>
-                            <a class="list-group-item" href="#">Västernorrland</a>
-                            <a class="list-group-item" href="#">Gävleborg</a>
-                            <a class="list-group-item" href="#">Dalarna</a>
-                            <a class="list-group-item" href="#">Värmland</a>
-                            <a class="list-group-item" href="#">Örebro</a>
-                            <a class="list-group-item" href="#">Västmanland</a>
-                            <a class="list-group-item" href="#">Uppsala</a>
-                            <a class="list-group-item" href="#">Stockholm</a>
-                            <a class="list-group-item" href="#">Södermanland</a>
-                            <a class="list-group-item" href="#">Skaraborg</a>
-                            <a class="list-group-item" href="#">Östergötland</a>
-                            <a class="list-group-item" href="#">Göteborg</a>
-                            <a class="list-group-item" href="#">Älvsborg</a>
-                            <a class="list-group-item" href="#">Jönköping</a>
-                            <a class="list-group-item" href="#">Kalmar</a>
-                            <a class="list-group-item" href="#">Gotland</a>
-                            <a class="list-group-item" href="#">Halland</a>
-                            <a class="list-group-item" href="#">Kronoberg</a>
-                            <a class="list-group-item" href="#">Blekinge</a>
-                            <a class="list-group-item" href="#">Skåne</a>       
+                            <a class="list-group-item" href="#">Botkyrka</a>
+                            <a class="list-group-item" href="#">Danderyd</a>
+                            <a class="list-group-item" href="#">Ekerö</a>
+                            <a class="list-group-item" href="#">Haninge</a>
+                            <a class="list-group-item" href="#">Huddinge</a>
+                            <a class="list-group-item" href="#">Järfälla</a>
+                            <a class="list-group-item" href="#">Lidingö</a>
+                            <a class="list-group-item" href="#">Nacka</a>
+                            <a class="list-group-item" href="#">Norrtälje</a>
+                            <a class="list-group-item" href="#">Nykvarn</a>
+                            <a class="list-group-item" href="#">Nynäshamn</a>
+                            <a class="list-group-item" href="#">Salem</a>
+                            <a class="list-group-item" href="#">Sigtuna</a>
                         </div>
                         
                     </div>
@@ -377,9 +378,9 @@
 
         </div>
         </div>
-        <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
-        <script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap.js"></script>
-        <script src="<?php echo Yii::app()->baseUrl; ?>/js/sb-admin.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/sb-admin.js"></script>
     </body>
     
 </html>

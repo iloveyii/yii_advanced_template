@@ -35,6 +35,14 @@ class SiteController extends EController
     }
     
     public function actionProduct() {
+        $this->layout="county";
         $this->render('product');
+    }
+    
+    public function actionCounty() {
+        $dataProvider=new CActiveDataProvider('County');
+		$this->render('county',array(
+			'dataProvider'=>$dataProvider,
+		));
     }
 }
