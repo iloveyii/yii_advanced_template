@@ -94,4 +94,22 @@ class County extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    public function getCountyList() {
+        $counties = County::model()->findAll();
+        
+        $str = '';
+        foreach ($counties as $county) {
+            $str .= '<a class="list-group-item" href="'. Yii::app()->createUrl('county/countycities/', array('slug'=>$county->slug)) . '">'. $county->name . '</a>';
+        }
+        return $str;
+    }
+    
+    public function slugExists($slug) {
+        $model = County::model()->findByAttributes(array('slug'=>$slug));
+        if(isset($model))
+            return true;
+        else 
+            return false;
+    }
 }

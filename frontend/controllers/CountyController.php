@@ -28,7 +28,7 @@ class CountyController extends EController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'admin','update','countycities'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -52,7 +52,7 @@ class CountyController extends EController
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel('County',$id),
 		));
 	}
 
@@ -86,7 +86,7 @@ class CountyController extends EController
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model=$this->loadModel('County', $id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -170,4 +170,13 @@ class CountyController extends EController
 			Yii::app()->end();
 		}
 	}
+    
+    public function actionCountycities($slug) {
+        $model = County::model()->with('cities')->findByAttributes(array('slug'=>$slug));
+        if(isset($model)) {
+            foreach ($model->cities as $city) {
+                echo $city->name . '<br />';
+            }
+        }
+    }
 }

@@ -18,7 +18,7 @@ return array(
 	'components' => array(
 //		configure to suit your needs
         'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=yiinit',
+			'connectionString' => 'mysql:host=localhost;dbname=mobilz',
 			'username' => 'root',
 			'password' => 'root',
 			'enableProfiling' => true,

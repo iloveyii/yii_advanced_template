@@ -7,10 +7,10 @@ $this->breadcrumbs=array(
 	'Manage',
 );
 
-$this->menu=array(
-	array('label'=>'List County', 'url'=>array('index')),
-	array('label'=>'Create County', 'url'=>array('create')),
-);
+//$this->menu=array(
+//	array('label'=>'List County', 'url'=>array('index')),
+//	array('label'=>'Create County', 'url'=>array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -40,7 +40,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 	'id'=>'county-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,

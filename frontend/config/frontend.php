@@ -18,7 +18,6 @@ return array(
 	'aliases' => array(
 		'bootstrap' => dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiistrap',
 		'yiiwheels' =>  dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiiwheels',
-		'controllers22' =>  dirname(__FILE__) . '/../..' . '/controllers',
 	),
     'import'=>array(
 		'application.widgets.*',
@@ -60,8 +59,14 @@ return array(
                 '' => 'site/index',
                 'product' => 'site/product',
                 'contact' => 'site/contact', 
-                // 'county' => 'site/county', // <language:(sv|en)>/
-                'county' => 'county/index', // <language:(sv|en)>/
+                // <language:(sv|en)>/
+                'county' => 'county/admin', // <language:(sv|en)>/
+                // 'countycities/<id:\d+>' => 'county/countycities', 
+                // 'county/<id:\d+>' => 'county/county', 
+                /* county Controller */
+                array(
+                   'class' => 'application.components.CountyUrl',
+                ),
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',

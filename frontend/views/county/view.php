@@ -7,13 +7,13 @@ $this->breadcrumbs=array(
 	$model->name,
 );
 
-$this->menu=array(
-	array('label'=>'List County', 'url'=>array('index')),
-	array('label'=>'Create County', 'url'=>array('create')),
-	array('label'=>'Update County', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete County', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage County', 'url'=>array('admin')),
-);
+//$this->menu=array(
+//	array('label'=>'List County', 'url'=>array('index')),
+//	array('label'=>'Create County', 'url'=>array('create')),
+//	array('label'=>'Update County', 'url'=>array('update', 'id'=>$model->id)),
+//	array('label'=>'Delete County', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+//	array('label'=>'Manage County', 'url'=>array('admin')),
+//);
 ?>
 
 <h1>View County #<?php echo $model->id; ?></h1>

@@ -73,7 +73,7 @@
                             <ul class="nav navbar-nav" id="main-menu">
                                   <li><a href="<?php echo $this->createUrl('site/product');?>"><?php echo Yii::t('app','Product'); ?></a></li>
                                   <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Contact'); ?></a></li>
-                                  <li><a href="<?php echo $this->createUrl('county/index');?>"><?php echo Yii::t('app','Login'); ?></a></li>
+                                  <li><a href="<?php echo $this->createUrl('county/admin');?>"><?php echo Yii::t('app','Login'); ?></a></li>
                             </ul>
 
                           </div><!-- /.navbar-collapse -->
@@ -98,29 +98,7 @@
                         <div class="list-group">
                             
                             <strong class="list-group-item"> Hela Sverige </strong>
-                            <a class="list-group-item" href="#">Norrbotten</a>
-                            <a class="list-group-item" href="#">Västerbotten</a>
-                            <a class="list-group-item" href="#">Jämtland</a>
-                            <a class="list-group-item" href="#">Västernorrland</a>
-                            <a class="list-group-item" href="#">Gävleborg</a>
-                            <a class="list-group-item" href="#">Dalarna</a>
-                            <a class="list-group-item" href="#">Värmland</a>
-                            <a class="list-group-item" href="#">Örebro</a>
-                            <a class="list-group-item" href="#">Västmanland</a>
-                            <a class="list-group-item" href="#">Uppsala</a>
-                            <a class="list-group-item" href="#">Stockholm</a>
-                            <a class="list-group-item" href="#">Södermanland</a>
-                            <a class="list-group-item" href="#">Skaraborg</a>
-                            <a class="list-group-item" href="#">Östergötland</a>
-                            <a class="list-group-item" href="#">Göteborg</a>
-                            <a class="list-group-item" href="#">Älvsborg</a>
-                            <a class="list-group-item" href="#">Jönköping</a>
-                            <a class="list-group-item" href="#">Kalmar</a>
-                            <a class="list-group-item" href="#">Gotland</a>
-                            <a class="list-group-item" href="#">Halland</a>
-                            <a class="list-group-item" href="#">Kronoberg</a>
-                            <a class="list-group-item" href="#">Blekinge</a>
-                            <a class="list-group-item" href="#">Skåne</a>       
+                            <?php echo County::model()->getCountyList() ;?>
                         </div>
                         
                     </div>

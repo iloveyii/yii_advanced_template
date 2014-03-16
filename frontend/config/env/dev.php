@@ -19,7 +19,7 @@ return array(
 	),
 	'components' => array(
 		'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=yiinit',
+			'connectionString' => 'mysql:host=localhost;dbname=mobilz',
 			'username' => 'root',
 			'password' => 'root',
 			'enableProfiling' => true,
