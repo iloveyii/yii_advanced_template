@@ -20,12 +20,20 @@ class CountyUrl extends CBaseUrlRule
  
     public function parseUrl($manager,$request,$pathInfo,$rawPathInfo)
     {
-        if (preg_match('%^([\w\-]+)$%', $pathInfo, $matches))
+        if (preg_match('%^([\w\-]+)/?(\d+)?$%', $pathInfo, $matches))
         {
-            $slug = $matches[1];
+            // if county is set
+            if(isset($matches[1])) {
+                $slug = $matches[1];
+            } else 
+                return FALSE;
+            
             if(County::model()->slugExists($slug)) {
-                $_GET['slug']= $slug ; 
-                return 'county/countycities';
+                $_GET['slug']= $slug ;
+                if(isset($matches[2])) {
+                    $_GET['city_id']= $matches[2]; 
+                }
+                return 'ad/index';
             }
         }
         return false;  // this rule does not apply

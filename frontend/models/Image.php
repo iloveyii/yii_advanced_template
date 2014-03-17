@@ -1,28 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "ad".
+ * This is the model class for table "image".
  *
- * The followings are the available columns in table 'ad':
+ * The followings are the available columns in table 'image':
  * @property integer $id
- * @property string $name
- * @property integer $active
- * @property string $price
- * @property integer $subcat_id
- * @property integer $city_id
+ * @property integer $ad_id
+ * @property string $image_file
  *
  * The followings are the available model relations:
- * @property City $city
- * @property Subcat $subcat
+ * @property Ad $ad
  */
-class Ad extends CActiveRecord
+class Image extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'ad';
+		return 'image';
 	}
 
 	/**
@@ -33,12 +29,12 @@ class Ad extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('active, subcat_id, city_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>45),
-			array('price', 'length', 'max'=>5),
+			array('id', 'required'),
+			array('id, ad_id', 'numerical', 'integerOnly'=>true),
+			array('image_file', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, active, price, subcat_id, city_id', 'safe', 'on'=>'search'),
+			array('id, ad_id, image_file', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,9 +46,7 @@ class Ad extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'city' => array(self::BELONGS_TO, 'City', 'city_id'),
-			'subcat' => array(self::BELONGS_TO, 'Subcat', 'subcat_id'),
-            'images' => array(self::HAS_MANY, 'Image', 'ad_id'),
+			'ad' => array(self::BELONGS_TO, 'Ad', 'ad_id'),
 		);
 	}
 
@@ -63,11 +57,8 @@ class Ad extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'active' => 'Active',
-			'price' => 'Price',
-			'subcat_id' => 'Subcat',
-			'city_id' => 'City',
+			'ad_id' => 'Ad',
+			'image_file' => 'Image File',
 		);
 	}
 
@@ -90,11 +81,8 @@ class Ad extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('active',$this->active);
-		$criteria->compare('price',$this->price,true);
-		$criteria->compare('subcat_id',$this->subcat_id);
-		$criteria->compare('city_id',$this->city_id);
+		$criteria->compare('ad_id',$this->ad_id);
+		$criteria->compare('image_file',$this->image_file,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,14 +93,20 @@ class Ad extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Ad the static model class
+	 * @return Image the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
     
-    public function getImage() {
-        return Image::model()->getPrimaryImage($this->id);
+    public function getPrimaryImage($ad_id) {
+        $images = Image::model()->findAllByAttributes(array('ad_id'=>$ad_id));
+        if(count($images) > 0) {
+            foreach ($images as $image) {
+                return $image->image_file;
+            }
+        }
+        return 'default.jpg';
     }
 }
