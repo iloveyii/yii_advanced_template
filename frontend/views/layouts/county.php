@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Twitter Bootstrap 3 - Frontend Template </title>
+        <title>Mobilz - Frontend Template </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
-        <link type="text/css" rel="stylesheet" href="css/main.css" />
-        <link type="text/css" rel="stylesheet" href="css/index.css" />
-        <link type="text/css" rel="stylesheet" href="css/sb-admin.css" />
-        <link type="text/css" rel="stylesheet" href="css/font-awesome.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/main.css" />
+        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/index.css" />
+        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/sb-admin.css" />
+        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->baseUrl; ?>/css/font-awesome.css" rel="stylesheet">
         
     </head>
     <body>
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12" style="line-height: 50px; padding: 5px 0px 0px;">
                         <div class="col-md-2">
-                            <img alt="Home" src="img/logo.png"> 
+                            <img alt="Home" src="<?php echo Yii::app()->baseUrl; ?>/img/logo.png"> 
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 pull-right">
                             <div class="col-md-8 col-xs-8">
@@ -65,7 +65,7 @@
                               <span class="icon-bar" style="background-color: #FFF;"></span>
                               <span class="icon-bar" style="background-color: #FFF;"></span>
                             </button>
-                            <a class="navbar-brand" href="<?php echo $this->createUrl('site/index');?>"><?php echo Yii::t('app','Home') ; ?></a>
+                            <a class="navbar-brand" href="<?php echo $this->createUrl('ad/index');?>"><?php echo Yii::t('app','Home') ; ?></a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -107,21 +107,7 @@
                         </div>
                         
                         <div class="list-group">
-                            <strong class="list-group-item"> Stockholm </strong>
-                            <a class="list-group-item" href="#">Norrbotten</a>
-                            <a class="list-group-item" href="#">Botkyrka</a>
-                            <a class="list-group-item" href="#">Danderyd</a>
-                            <a class="list-group-item" href="#">Ekerö</a>
-                            <a class="list-group-item" href="#">Haninge</a>
-                            <a class="list-group-item" href="#">Huddinge</a>
-                            <a class="list-group-item" href="#">Järfälla</a>
-                            <a class="list-group-item" href="#">Lidingö</a>
-                            <a class="list-group-item" href="#">Nacka</a>
-                            <a class="list-group-item" href="#">Norrtälje</a>
-                            <a class="list-group-item" href="#">Nykvarn</a>
-                            <a class="list-group-item" href="#">Nynäshamn</a>
-                            <a class="list-group-item" href="#">Salem</a>
-                            <a class="list-group-item" href="#">Sigtuna</a>
+                            <?php echo County::model()->getCountyCityList($this->county) ;?>
                         </div>
                         
                     </div>
@@ -130,55 +116,7 @@
                             <div class="col-md-12">
                                 <!-- Carousel 
                                 ============================================= -->
-                                <div id="carousel-id" class="carousel slide" data-ride="carousel" data-interval="3000">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carousel-id" data-slide-to="1"></li>
-                                        <li data-target="#carousel-id" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner" style="height: 200px;">
-                                        <div class="item active">
-                                            <img  alt="image 1" src="img/img1.jpeg" />
-                                            <div class="container">
-                                                <div class="carousel-caption">
-                                                    <h1>My Heading Text</h1>
-                                                    <p>This text will appear on the slide</p>
-                                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <img alt="image 1" src="img/img2.jpeg" />
-                                            <div class="container">
-                                                <div class="carousel-caption">
-                                                    <h1>My Heading Text</h1>
-                                                    <p>This text will appear on the slide</p>
-                                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <img alt="image 1" src="img/img3.jpeg" />
-                                            <div class="container">
-                                                <div class="carousel-caption">
-                                                    <h1>My Heading Text</h1>
-                                                    <p>This text will appear on the slide</p>
-                                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <a href="#carousel-id" class="left carousel-control" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a href="#carousel-id" class="right carousel-control" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div> 
+                                <?php echo Carousel::model()->getCarousel() ;?>
                                 <!-- Carousel -->
                             </div>
                         </div>
@@ -378,9 +316,9 @@
 
         </div>
         </div>
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/sb-admin.js"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap.js"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/js/sb-admin.js"></script>
     </body>
     
 </html>

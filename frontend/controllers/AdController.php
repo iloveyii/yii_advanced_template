@@ -28,7 +28,7 @@ class AdController extends EController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'detail'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -120,13 +120,18 @@ class AdController extends EController
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex($slug=FALSE, $city_id=FALSE)
+	public function actionIndex($slug=FALSE, $city_slug=FALSE)
 	{
+        $city_id = City::model()->getID($city_slug);
         $criteria=new CDbCriteria;
-            
+        $this->layout="main";    
         if(isset($_GET['slug'])) {
+            
+            $this->county=$_GET['slug']; // for main view
+            
             $model = County::model()->findByAttributes(array('slug'=>$slug));
             if(isset($model)) {
+                $this->layout="county";
                 $county_id = $model->id;
                 $criteria->join="INNER JOIN city ON t.city_id=city.id";
                 $criteria->condition="city.county_id=$county_id";
@@ -136,17 +141,20 @@ class AdController extends EController
             
         }
         
-        if($city_id > 0) {
+        if($city_id !== FALSE) {
             // if county_id is false then create join
             if(!($slug > 0)) {
                 $criteria->join="INNER JOIN city ON t.city_id=city.id";
             }
             $criteria->addCondition("city.id=$city_id");
+            // $this->layout="county";
         }    
         
 		$dataProvider=new CActiveDataProvider('Ad', array(
             'criteria'=>$criteria,
         ));
+        
+        
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -179,4 +187,12 @@ class AdController extends EController
 			Yii::app()->end();
 		}
 	}
+    
+    public function actionDetail($id) {
+        $this->layout="county";
+        $model = $this->loadModel('Ad', $id);
+        $this->render('detail',array(
+			'model'=>$model,
+		));
+    }
 }

@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12" style="line-height: 50px; padding: 5px 0px 0px;">
                         <div class="col-md-2">
-                            <img alt="Home" src="img/logo.png"> 
+                            <img alt="Home" src="<?php echo Yii::app()->baseUrl; ?>/img/logo.png"> 
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 pull-right">
                             <div class="col-md-8 col-xs-8">
@@ -65,7 +65,7 @@
                               <span class="icon-bar" style="background-color: #FFF;"></span>
                               <span class="icon-bar" style="background-color: #FFF;"></span>
                             </button>
-                            <a class="navbar-brand" href="<?php echo $this->createUrl('site/index');?>"><?php echo Yii::t('app','Home') ; ?></a>
+                            <a class="navbar-brand" href="<?php echo $this->createUrl('ad/index');?>"><?php echo Yii::t('app','Home') ; ?></a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,7 +96,6 @@
                         </div>
                         
                         <div class="list-group">
-                            
                             <strong class="list-group-item"> Hela Sverige </strong>
                             <?php echo County::model()->getCountyList() ;?>
                         </div>
@@ -107,55 +106,7 @@
                             <div class="col-md-12">
                                 <!-- Carousel 
                                 ============================================= -->
-                                <div id="carousel-id" class="carousel slide" data-ride="carousel" data-interval="3000">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carousel-id" data-slide-to="1"></li>
-                                        <li data-target="#carousel-id" data-slide-to="2"></li>
-                                    </ol>
-                                    <div class="carousel-inner" style="height: 200px;">
-                                        <div class="item active">
-                                            <img  alt="image 1" src="img/img1.jpeg" />
-                                            <div class="container">
-                                                <div class="carousel-caption">
-                                                    <h1>My Heading Text</h1>
-                                                    <p>This text will appear on the slide</p>
-                                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <img alt="image 1" src="img/img2.jpeg" />
-                                            <div class="container">
-                                                <div class="carousel-caption">
-                                                    <h1>My Heading Text</h1>
-                                                    <p>This text will appear on the slide</p>
-                                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <img alt="image 1" src="img/img3.jpeg" />
-                                            <div class="container">
-                                                <div class="carousel-caption">
-                                                    <h1>My Heading Text</h1>
-                                                    <p>This text will appear on the slide</p>
-                                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <a href="#carousel-id" class="left carousel-control" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a href="#carousel-id" class="right carousel-control" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div> 
+                                <?php echo Carousel::model()->getCarousel() ;?>
                                 <!-- Carousel -->
                             </div>
                         </div>

@@ -113,6 +113,7 @@ class Ad extends CActiveRecord
 	}
     
     public function getImage() {
-        return Image::model()->getPrimaryImage($this->id);
+        $image_file= Image::model()->getPrimaryImage($this->id);
+        return Yii::app()->baseUrl.'/img/'.$image_file ; 
     }
 }

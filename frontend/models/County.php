@@ -105,11 +105,62 @@ class County extends CActiveRecord
         return $str;
     }
     
+    /**
+     * Gets All cities in a county in list group format
+     * 
+     * @param string $county is the slug 
+     * @return string
+     * @throws CHttpException
+     */
+    public function getCountyCityList($slug) {
+        
+        $county_id = $this->getCountyID($slug);
+        if(!isset($county_id))
+            throw new CHttpException(400, 'This county does not exist');
+        
+        $county_name = $this->getCountyName($slug);
+        $str = '<a class="list-group-item" href="'. Yii::app()->createUrl('county/countycities', array('slug'=>$slug)) . '"><strong>'. $county_name . '</strong></a>';
+        
+        $cities = City::model()->getCityList($county_id);
+        foreach ($cities as $city) {
+            $str .= '<a class="list-group-item" href="'. Yii::app()->createUrl('county/cities', array('slug'=>$slug,'city_slug'=>$city->slug)) . '">'. $city->name . '</a>';
+        }
+        return $str;
+    }
+    
     public function slugExists($slug) {
         $model = County::model()->findByAttributes(array('slug'=>$slug));
         if(isset($model))
             return true;
         else 
             return false;
+    }
+    
+    /**
+     * Finds county ID by slug
+     * 
+     * @param string $slug
+     * @return boolean
+     */
+    public function getCountyID($slug) {
+        $model=  County::model()->findByAttributes(array('slug'=>$slug));
+        if(isset($model))
+            return $model->id;
+        else 
+            return FALSE;
+    }
+    
+    /**
+     * Finds county name by slug
+     * 
+     * @param string $slug
+     * @return boolean
+     */
+    public function getCountyName($slug) {
+        $model=  County::model()->findByAttributes(array('slug'=>$slug));
+        if(isset($model))
+            return $model->name;
+        else 
+            return FALSE;
     }
 }

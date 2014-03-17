@@ -16,8 +16,9 @@ class EController extends CController
 	public $meta_description = array();
 	public $breadcrumbs;
 
+    public $county;
 
-	/**
+    /**
 	 * Gets a param
 	 * @param $name
 	 * @param null $defaultValue

@@ -23,13 +23,13 @@ $this->breadcrumbs=array(
         <div class="col-md-3">
             <div class="thumbnail">
                 <a href="#">
-                    <img src="img/<?php echo $data->getImage();?>" class="img-responsive">
+                    <img src="<?php echo $data->getImage();?>" class="img-responsive">
                 </a>
                 <div class="caption">
                     <h4><?php echo $data->name;?></h4>
                     <p>SEK <?php echo $data->price ;?></p>
                     <p>
-                        <a class="btn btn-default" href="/buy/<?php echo $data->id?>">Details</a>
+                        <a class="btn btn-default" href="<?php echo Yii::app()->createUrl('ad/detail', array('id'=>$data->id)); ?>">Details</a>
                         <a class="btn btn-success add-to-cart" id="1" href="#">Buy</a>
                     </p>
                 </div>

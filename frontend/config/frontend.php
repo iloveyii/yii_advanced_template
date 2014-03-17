@@ -56,9 +56,11 @@ return array(
 
 			'rules' => array(
 				// default rules
-                '' => 'site/index',
+                '' => 'ad/index',
+                'index' => 'ad/index',
                 'product' => 'site/product',
                 'contact' => 'site/contact', 
+                'ad/<id:\d+>' => 'ad/detail',
                 // <language:(sv|en)>/
                 'county' => 'county/admin', // <language:(sv|en)>/
                 // 'countycities/<id:\d+>' => 'county/countycities', 
@@ -66,6 +68,10 @@ return array(
                 /* county Controller */
                 array(
                    'class' => 'application.components.CountyUrl',
+                ),
+                /* County cities */
+                array(
+                   'class' => 'application.components.CountyCitiesUrl',
                 ),
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
@@ -86,10 +92,10 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				
+				/*
 				array(
 					'class'=>'CWebLogRoute',
-				),
+				), */
 				
 			),
 		),

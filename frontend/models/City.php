@@ -100,4 +100,42 @@ class City extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    public function getCityList($county_id) {
+        $cities = City::model()->findAllByAttributes(array('county_id'=>$county_id));
+        return $cities;
+    }
+    
+    public function cityIDExists($city_id) {
+        $model = City::model()->findByPk($city_id);
+        if(isset($model))
+            return TRUE;
+        else 
+            return FALSE;
+    }
+    
+    public function citySlugExists($city_slug) {
+        $model = City::model()->findByAttributes(array('slug'=>$city_slug));
+        if(isset($model))
+            return TRUE;
+        else 
+            return FALSE;
+    }
+    
+    public function getCityName($city_id) {
+        $model = City::model()->findByPk($city_id);
+        if(isset($model))
+            return $model->name;
+        else 
+            return FALSE;
+    }
+    
+    public function getID($city_slug) {
+        if($city_slug ===FALSE)            return FALSE;
+        $model = City::model()->findByAttributes(array('slug'=>$city_slug));
+        if(isset($model))
+            return $model->id;
+        else 
+            return FALSE;
+    }
 }

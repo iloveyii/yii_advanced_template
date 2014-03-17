@@ -8,9 +8,6 @@ class CountyUrl extends CBaseUrlRule
         // check route for this action 
         if ($route==='county/countycities')
         {
-//            if (isset(Yii::app()->language) && Yii::app()->language=='sv' )
-//                return 'tanka/'. $params['slug'];
-//            else 
             // checks if slug exist in DB
             if(County::model()->slugExists($params['slug']))
                 return $params['slug'];
