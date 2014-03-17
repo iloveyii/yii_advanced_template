@@ -8,13 +8,22 @@
         <div class="col-md-5">
             <div class="thumbnail">
                 <a href="#">
-                    <img src="<?php echo $model->getImage() ;?>" class="img-responsive">
+                    <img style="height: 225px;" src="<?php echo $pImage ;?>" class="img-responsive">
                 </a>
                 <div class="caption">
                     <h4><?php echo $model->name ;?></h4>
                     <p>SEK: <?php echo $model->price ;?></p>
                 </div>
             </div>
+            <?php foreach ($images as $image): ?>
+            <div class="col-md-3 no-pad">
+                <div class="thumbnail">
+                    <a href="<?php echo $image->getAdLink($model->id); ?>">
+                        <img style="height: 90px;"  src="<?php echo $image->getImage() ;?>" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+            <?php endforeach; ?>
         </div>
         
         <div class="col-md-6 col-md-offset-1">
@@ -28,3 +37,7 @@
         </div>
     </div>
 	
+<?php 
+// print_r($_GET); 
+echo Yii::app()->request->url;
+?>

@@ -188,11 +188,23 @@ class AdController extends EController
 		}
 	}
     
-    public function actionDetail($id) {
+    public function actionDetail($id, $image_id=FALSE) {
+        
         $this->layout="county";
         $model = $this->loadModel('Ad', $id);
+        
+        if($image_id ===FALSE) {
+            $pImage=$model->getPrimaryImage();
+        } else {
+            $pImage=$model->getImage($image_id);
+        }
+        
+        $this->county=$model->getCounty();
+        
         $this->render('detail',array(
 			'model'=>$model,
+            'pImage'=>$pImage, // primary image
+            'images'=>$model->getAllImages(),
 		));
     }
 }

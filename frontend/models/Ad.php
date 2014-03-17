@@ -112,8 +112,29 @@ class Ad extends CActiveRecord
 		return parent::model($className);
 	}
     
-    public function getImage() {
+    public function getPrimaryImage() {
         $image_file= Image::model()->getPrimaryImage($this->id);
         return Yii::app()->baseUrl.'/img/'.$image_file ; 
     }
+    
+    public function getAllImages() {
+        return Image::model()->findAllByAttributes(array('ad_id'=>  $this->id));
+    }
+    
+    public function getImage($image_id) {
+        $model= Image::model()->findByPk($image_id);
+        if(isset($model))
+            $image_file=$model->image_file;
+        else 
+            $image_file='default.jpg';
+        
+        return Yii::app()->baseUrl.'/img/'.$image_file ; 
+    }
+    
+    public function getCounty() {
+        $model = Ad::model()->findByPk($this->id);
+        return $model->city->county->name;
+    }
+    
+    
 }

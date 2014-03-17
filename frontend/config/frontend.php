@@ -60,6 +60,8 @@ return array(
                 'index' => 'ad/index',
                 'product' => 'site/product',
                 'contact' => 'site/contact', 
+                
+                'ad/<id:\d+>/<image_id:\d+>' => 'ad/detail',
                 'ad/<id:\d+>' => 'ad/detail',
                 // <language:(sv|en)>/
                 'county' => 'county/admin', // <language:(sv|en)>/

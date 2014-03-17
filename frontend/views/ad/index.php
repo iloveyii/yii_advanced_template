@@ -23,7 +23,7 @@ $this->breadcrumbs=array(
         <div class="col-md-3">
             <div class="thumbnail">
                 <a href="#">
-                    <img src="<?php echo $data->getImage();?>" class="img-responsive">
+                    <img src="<?php echo $data->getPrimaryImage();?>" class="img-responsive">
                 </a>
                 <div class="caption">
                     <h4><?php echo $data->name;?></h4>

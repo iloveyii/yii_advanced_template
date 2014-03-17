@@ -109,4 +109,13 @@ class Image extends CActiveRecord
         }
         return 'default.jpg';
     }
+    
+    public function getImage() {
+        return Yii::app()->baseUrl.'/img/'.  $this->image_file ;
+    }
+    
+    public function getAdLink($ad_id) {
+        $link = Yii::app()->createUrl('ad/detail', array('id'=>$ad_id, 'image_id'=>$this->id));
+        return $link;
+    }
 }
