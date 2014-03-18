@@ -21,6 +21,8 @@ return array(
 	),
     'import'=>array(
 		'application.widgets.*',
+		'application.components.*',
+        'ext.giix-components.*'
 	),
 	// application behaviors
 	'behaviors' => array(),
@@ -42,6 +44,35 @@ return array(
 			'class' => 'bootstrap.components.TbApi',
 		),
 
+        // for resing card images to 320*150
+		'imageResizer'=>array(
+			'class'=>'ImageResizer'
+		),
+		
+		'hybridAuth'=>array(
+            'class'=>'ext.widgets.hybridAuth.CHybridAuth',
+            'enabled'=>true, // enable or disable this component
+            'config'=>array(
+                "base_url" => "http://fillup.se/login/endpoint", 
+                "providers" => array(
+                      "Google" => array(
+                           "enabled" => false,
+                           "keys" => array("id" => "", "secret" => ""),
+                       ),
+                      "Facebook" => array(
+                           "enabled" => true,
+                           "keys" => array("id" => "202921523234844", "secret" => "e2ad43fcec1dca4503f990e6b4b68862"),
+                       ),
+                      "Twitter" => array(
+                           "enabled" => false,
+                           "keys" => array("key" => "", "secret" => "")
+                      ),
+                   ),
+                   "debug_mode" => false,
+                   "debug_file" => "",
+               ),
+        ),//end hybridAuth
+
 		'clientScript' => array(
 			'scriptMap' => array(
 				'bootstrap.min.css' => false,
@@ -57,9 +88,11 @@ return array(
 			'rules' => array(
 				// default rules
                 '' => 'ad/index',
+                'login'=>'site/login',
                 'index' => 'ad/index',
                 'product' => 'site/product',
                 'contact' => 'site/contact', 
+                'konto/registera'=> 'user/create',
                 
                 'ad/<id:\d+>/<image_id:\d+>' => 'ad/detail',
                 'ad/<id:\d+>' => 'ad/detail',

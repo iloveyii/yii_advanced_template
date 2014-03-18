@@ -10,8 +10,9 @@ class LoginForm extends CFormModel
 	public $username;
 	public $password;
 	public $rememberMe;
+    public $forgotPassword;
 
-	private $_identity;
+    private $_identity;
 
 	/**
 	 * Declares the validation rules.
@@ -33,10 +34,14 @@ class LoginForm extends CFormModel
 	/**
 	 * Declares attribute labels.
 	 */
+    
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>'Remember me next time',
+            'username' => Yii::t('app', 'Email'),
+			'password' => Yii::t('app', 'Password'),
+			'rememberMe'=>Yii::t('app', 'Remember me next time'),
+            'forgotPassword'=>Yii::t('app', 'Forgot Password?'),
 		);
 	}
 
@@ -74,4 +79,5 @@ class LoginForm extends CFormModel
 		else
 			return false;
 	}
+    
 }

@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12" style="line-height: 50px; padding: 5px 0px 0px;">
                         <div class="col-md-2">
-                            <img alt="Home" src="<?php echo Yii::app()->baseUrl; ?>/img/logo.png"> 
+                            <img alt="Home" src="<?php echo Yii::app()->baseUrl;?>/img/logo.png"> 
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 pull-right">
                             <div class="col-md-8 col-xs-8">
@@ -71,9 +71,9 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav" id="main-menu">
-                                  <li><a href="<?php echo $this->createUrl('site/product');?>"><?php echo Yii::t('app','Product'); ?></a></li>
                                   <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Contact'); ?></a></li>
-                                  <li><a href="<?php echo $this->createUrl('site/contact');?>"><?php echo Yii::t('app','Login'); ?></a></li>
+                                  <li><a href="<?php echo $this->createUrl('user/create');?>"><?php echo Yii::t('app','Register'); ?></a></li>
+                                  <li><a href="<?php echo $this->createUrl('site/login');?>"><?php echo Yii::t('app','Login'); ?></a></li>
                             </ul>
 
                           </div><!-- /.navbar-collapse -->
@@ -158,7 +158,7 @@
                            <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                   <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                       <div class="">
-                                          <img class="cimg img-responsive" src="img/visa.png" />
+                                          <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/visa.png" />
                                       </div>
                                   </div>
                                   <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -168,7 +168,7 @@
                            <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                   <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                       <div class="">
-                                          <img class="cimg img-responsive" src="img/master.png" />
+                                          <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/master.png" />
                                       </div>
                                   </div>
                                   <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -178,7 +178,7 @@
                            <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                   <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                       <div class="">
-                                          <img class="cimg img-responsive" src="img/discover.png" />
+                                          <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/discover.png" />
                                       </div>
                                   </div>
                                   <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -188,7 +188,7 @@
                            <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                   <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                       <div class="">
-                                          <img class="cimg img-responsive" src="img/maestro.png" />
+                                          <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/maestro.png" />
                                       </div>
                                   </div>
                                   <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -244,7 +244,7 @@
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/nordea.png" />
+                                                <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/nordea.png" />
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -254,7 +254,7 @@
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/handels.png" />
+                                                <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/handels.png" />
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -264,7 +264,7 @@
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/swed.png" />
+                                                <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/swed.png" />
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
@@ -274,14 +274,13 @@
                                  <div class="col-md-3 col-sm-4 col-xs-4 no-pad">
                                         <div class="col-md-8 col-sm-8 col-xs-8 no-pad cc-left" style="background-color: #FFF;">
                                             <div class="">
-                                                <img class="cimg img-responsive" src="img/seb.png" />
+                                                <img class="cimg img-responsive" src="<?php echo Yii::app()->baseUrl;?>/img/seb.png" />
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-4 no-pad cc-right">
                                             <i class="fa fa-check"></i>
                                         </div>
                                 </div>
-
 
                             </div>
                        </div>
@@ -294,24 +293,8 @@
                     <a id="login-modal" data-toggle="modal"  href="#terms">Terms & Conditions</a>
                 </p>
                 <!-- Modal -->
-                <div class="modal fade" id="terms" role="dialog" aria-hidden="true" tabindex="-1">
-                    <div class="modal-dialog dg">
-                        <div class="modal-content" style="border: 10px solid #7A7A7A;">
-                            <i id="pty_close" data-dismiss="modal" class="fa fa-times-circle-o icon-md pull-right"></i>
-                            <div class="modal-header" style="padding: 10px;">
-                                <img class="col-xs-3 col-sm-2 col-md-2 img-circle img-responsive" src="<?php echo Yii::app()->baseUrl . '/img/login-icon.png'; ?>" alt="Login here">
-                                <h3>You need to login</h3>
-                            </div>
-                            <div class="modal-body" style="padding: 20px 0 0;">
-                                <?php $this->widget('Modallogin'); ?>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?php $this->widget('Modallogin'); ?>
+                <!-- Modal -->
            </div>
 
         </div>
